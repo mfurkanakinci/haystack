@@ -1,0 +1,6 @@
+---
+fixes:
+  - |
+    Fixed ``RecursiveDocumentSplitter`` reporting ``page_number`` as the page a chunk ends on.
+    It now matches ``DocumentSplitter`` and ``MarkdownHeaderSplitter`` and uses the page the chunk starts on.
+    A form feed inside a chunk no longer bumps the reported page; leading form feeds still advance it.
